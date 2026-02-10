@@ -1,8 +1,13 @@
-body{
+*{
   margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
   height:100vh;
-  background: linear-gradient(135deg,#ffe6f0,#fff6ee);
-  font-family: 'Poppins', sans-serif;
+  background:linear-gradient(135deg,#fff1f6,#fff9ec);
   display:flex;
   justify-content:center;
   align-items:center;
@@ -11,48 +16,53 @@ body{
 
 .page{
   display:none;
-  text-align:center;
-  animation: fade 1s ease;
+  animation:fadeSlide 0.8s ease;
 }
 
 .page.active{
   display:block;
 }
 
-img{
-  width:220px;
-  border-radius:20px;
-  margin:20px 0;
+.card{
+  width:330px;
+  background:#fff;
+  padding:25px;
+  border-radius:32px;
+  text-align:center;
+  box-shadow:0 25px 50px rgba(0,0,0,0.18);
 }
 
-h1,h2{
-  color:#ff4d6d;
+.card img{
+  width:140px;
+  margin-bottom:15px;
+  animation:float 3s ease-in-out infinite;
+}
+
+h2{
+  color:#ff5c8a;
 }
 
 p{
   color:#555;
-  font-size:18px;
+  margin:15px 0;
+  line-height:1.5;
 }
 
 button{
-  padding:12px 22px;
+  padding:12px 28px;
   border:none;
-  border-radius:30px;
+  border-radius:25px;
+  background:linear-gradient(135deg,#ff7aa2,#ff4d6d);
+  color:white;
   font-size:16px;
   cursor:pointer;
-  margin:10px;
-  background:#ff4d6d;
-  color:white;
+  margin:6px;
   transition:0.3s;
+  animation:pulse 2s infinite;
 }
 
 button:hover{
-  transform: rotate(-3deg) scale(1.05);
-  background:#ff1e50;
-}
-
-.yes{
-  background:#ff85a2;
+  transform:scale(1.1);
 }
 
 .no{
@@ -60,7 +70,44 @@ button:hover{
   position:relative;
 }
 
-@keyframes fade{
-  from{opacity:0; transform:translateY(20px);}
-  to{opacity:1; transform:translateY(0);}
+.happy{
+  background:linear-gradient(135deg,#fff0f7,#fff);
+}
+
+/* animations */
+@keyframes fadeSlide{
+  from{opacity:0; transform:translateY(30px) scale(0.9);}
+  to{opacity:1; transform:translateY(0) scale(1);}
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-12px);}
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(255,77,109,0.5);}
+  70%{box-shadow:0 0 0 16px rgba(255,77,109,0);}
+  100%{box-shadow:0 0 0 0 rgba(255,77,109,0);}
+}
+
+/* floating hearts */
+.bg-hearts::before,
+.bg-hearts::after{
+  content:"💗";
+  position:absolute;
+  font-size:24px;
+  animation:hearts 6s infinite ease-in-out;
+}
+
+.bg-hearts::after{
+  content:"💖";
+  left:70%;
+  animation-delay:2s;
+}
+
+@keyframes hearts{
+  0%{bottom:-50px; opacity:0;}
+  40%{opacity:1;}
+  100%{bottom:110%; opacity:0;}
 }
