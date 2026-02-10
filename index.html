@@ -1,43 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Meri Paglu 💖</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Meri Paglu 💖</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="bg-hearts"></div>
+
+<!-- PAGE 1 -->
 <div class="page active">
-  <h1>Meri Paglu 🥺</h1>
-  <img src="67ed5895670f23f21ace14a8cf04c4fa.gif">
-  <p>Tum naraz ho… aur meri duniya thodi si ruk gayi hai 💔</p>
-  <button onclick="nextPage()">Aage chalein?</button>
+  <div class="card">
+    <img src="67ed5895670f23f21ace14a8cf04c4fa.gif">
+    <h2>Hey Cutiepie 🥺</h2>
+    <p>Can we talk for a moment?</p>
+    <button onclick="nextPage()">Continue 💕</button>
+  </div>
 </div>
 
+<!-- PAGE 2 -->
 <div class="page">
-  <img src="84536ea88ad82992afb6e879bd7616c2.gif">
-  <p>Galti ho gayi… jaan ke nahi, dil se bhi nahi 😞</p>
-  <button onclick="nextPage()">Sunogi?</button>
+  <div class="card">
+    <img src="84536ea88ad82992afb6e879bd7616c2.gif">
+    <p>Tum thodi si naraz ho…<br>aur mujhe bilkul acha nahi lag raha 😞</p>
+    <button onclick="nextPage()">Sunogi?</button>
+  </div>
 </div>
 
+<!-- PAGE 3 -->
 <div class="page">
-  <img src="8d9a3edce3008fa532a5a41d17667f7e.gif">
-  <p>Tumhari ek muskaan ke liye<br>main hazaar baar sorry bol sakta hoon 💗</p>
-  <button onclick="nextPage()">Aur thoda?</button>
+  <div class="card">
+    <img src="8d9a3edce3008fa532a5a41d17667f7e.gif">
+    <p>Galti ho gayi paglu…<br>jaan ke kabhi nahi karunga 💔</p>
+    <button onclick="nextPage()">Hmm</button>
+  </div>
 </div>
 
+<!-- PAGE 4 -->
 <div class="page">
-  <img src="4866a967d598b8f141b6650b4ebd4d32.gif">
-  <p>Meri har dua, har khwaab<br>sirf tumse shuru hota hai 🌙</p>
-  <button onclick="nextPage()">Last?</button>
+  <div class="card">
+    <img src="4866a967d598b8f141b6650b4ebd4d32.gif">
+    <p>Tumhari ek smile ke liye<br>hazaar baar sorry 🥹</p>
+    <button onclick="nextPage()">Aage</button>
+  </div>
 </div>
 
+<!-- PAGE 5 -->
 <div class="page">
-  <img src="19f7f914a3e66fe61be21be1abdfacb4.gif">
-  <h2>Maaf kar do na 🥹❤️</h2>
-  <p>Meri Paglu… bina tum sab adhoora hai</p>
-  <button class="yes">Haan 💕</button>
-  <button class="no" onmouseover="moveBtn(this)">Nahi 😜</button>
+  <div class="card">
+    <img src="19f7f914a3e66fe61be21be1abdfacb4.gif">
+    <p>Meri Paglu…<br>maaf kar dogi na? 🥺💖</p>
+    <button onclick="yes()">Haan 💕</button>
+    <button class="no" onmouseover="runAway(this)">Nahi 😜</button>
+  </div>
+</div>
+
+<!-- PAGE 6 HAPPY -->
+<div class="page">
+  <div class="card happy">
+    <img src="e4df0bfde0aedd13ec9882d207c9c94e.gif">
+    <h2>Yaaaaay 😍🎉</h2>
+    <p>
+      Tum maan gayi 💖<br>
+      Ab sab theek hai<br>
+      I Love You ♾️
+    </p>
+  </div>
 </div>
 
 <script src="script.js"></script>
